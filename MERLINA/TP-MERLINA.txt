@@ -1,0 +1,587 @@
+CODIGO HTML: INDEX.HMTL
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Netflix</title>
+</head>
+<body>
+     <header>
+        <div class="contenedor">
+            <h2 class="logotipo">Netflix</h2>
+            <nav>
+                <a href="#" class="activo">Inicio</a>
+                <a href="#">Programas</a>
+                <a href="#">Peliculas</a>
+                <a href="#">Más Recientes</a>
+                <a href="#">Mi lista</a>
+                <a href="/index1.html">Sign in</a>
+            </nav>
+        </div>
+     </header>
+ 
+     <main>
+        <div class="serie-principal">
+            <div class="contenedor">
+                <h3 class="titulo">Merlina</h3>
+                <p class="descripcion">
+                    Inteligente, sarcástica y un poco muerta por dentro, Merlina Addams 
+                    investiga una ola de asesinatos mientras hace nuevos amigos (y enemigos)
+                    en la Academia Nunca Más.
+                    Protagonistas:Jenna Ortega,Gwendoline Christie,Riki Lindhome
+                    Creado por:Alfred Gough,Miles Millar
+                </p>
+                <button role="button" class="boton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                    <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                  </svg>Reproducir</button>
+                <button role="button" class="boton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg>Más información</button>
+            </div>
+        </div>
+     </main>
+ 
+   
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+++++++++++++ CSSS DE INDEX.HTML +++++++++ 
+STYLE.CSS
+
+
+:root{
+    --rojo: #e50914;
+    --fondo: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+    
+}
+
+header nav a{
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo{
+    color: #fff;
+}
+
+
+
+
+.serie-principal{
+    display: flex;
+    align-items: end;
+    font-size: 16px;
+    min-height: 40.62rem;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(./img/Merlina_Serie_de_TV-938002261-large.jpg);
+    background-position: center center;
+    margin-bottom: 3.12em;
+}   °°°°°°°°°°°°°°°°°°°FALTARIA AGREGAR UN BACKGROUND-SIZE: COVER
+
+.serie-principal .contenedor{
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.serie-principal .titulo{
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.serie-principal .descripcion{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.serie-principal .boton{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.25;
+}
+
+.serie-principal .boton:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+
+@media screen and (max-width:800px) {
+    header .logotipo{
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .serie-principal{
+        font-size: 14px;
+    }
+
+    .serie-principal .descripcion{
+        max-width: 100px;
+    }
+}   
+
+
++++++++++++++++ HTML DE INDEX1.HTML+++++++
+
+CODIGO INDEX1.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+<link rel="stylesheet" href="style1.css">
+<title>Netflix Sign</title>
+</head>
+<body>
+    <header class="showcase">
+        
+
+            <div class="logo">
+                <img src="https://i.ibb.co/r5krrdz/logo.png">
+            </div>
+
+            <div class="showcase-content">
+                <div class="formm">
+                    <form>
+                        <h1>Sign In</h1>
+                        <div class="info">
+                            <input class="email" type="email" placeholder="Email or phone number"> <br>
+                            <input class="email" type="password" placeholder="Password">
+                        </div>
+                        <div class="btn">
+                            <button class="btn-primary" type="submit">Sign In</button>
+                        </div>
+                        
+                    </form>
+    
+                </div>
+                
+                
+               
+            </div>
+
+       
+            
+       
+    </header>
+
+
+</body>
+</html>
+
+++++++++++++++++++++++++++++++++++CSS DE STYLE1+++++++++++++++++++++++++++++
+
+CODIGO STYLE1.CSS
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background: #000;
+	color: #999;
+}
+
+h1
+ {
+	color: #fff;
+}
+
+img {
+	width: 100%;
+}
+
+.showcase {
+	width: 80%;
+	height: 100vh;
+	position: relative;
+	background: url('https://i.ibb.co/vXqDmnh/background.jpg') no-repeat center center/cover;
+}
+
+.showcase::after {
+    display: flex;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.65);
+	box-shadow: inset 30px 10px 150px #000000;
+}
+
+header .showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+	position: relative;
+	z-index: 2;
+	height: 90px;
+}
+
+.logo img {
+	width: 170px;
+	position: absolute;
+	top: 20px;
+	left: 40px;
+}
+
+.showcase-content {
+	position: relative;
+	z-index: 2;
+	width: 450px;
+	height: 650px;
+	background: rgb(0, 0, 0, 0.65);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: left;
+	padding: 60px 65px;
+}
+
+.formm h1 {
+	margin-bottom: 20px;
+}
+
+.formm {
+    display: flex;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.formm .info {
+	padding: 5px 0;
+	/* margin-bottom: 20px; */
+}
+
+.formm .info .email {
+	margin-bottom: 30px;
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+	padding: 10px;
+	font-size: inherit;
+}
+
+.formm .btn {
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.btn-primary {
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+	background: red;
+	color: #fff;
+	font-size: inherit;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+}
+
+.showcase-content .btn-primary:hover {
+    background-color: whitesmoke;
+    color: red;
+}
+
+/* ------ input ------- */
+
+input[type=checkbox] {
+	background: #737373;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border: 0;
+	height: 16px;
+	left: -20px;
+	width: 16px;
+	margin-right: 5px;
+}
+
+input[type=email] {
+	background: #343434;
+}
+
+input[type=password] {
+	background: #343434;
+   
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    header .logo{
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .showcase {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .showcase-content {
+        font-size: 14px;
+    }
+
+    .showcase-content .formm {
+        max-width: 100px;
+
+    }
+    
+    
+}
+
+
+
+
+
+
+******************************************************************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Netflix</title>
+</head>
+<body>
+     <header>
+        <div class="contenedor">
+            <h2 class="logotipo">Netflix</h2>
+            <nav>
+                <a href="#" class="activo">Inicio</a>
+                <a href="#">Programas</a>
+                <a href="#">Peliculas</a>
+                <a href="#">Más Recientes</a>
+                <a href="#">Mi lista</a>
+            </nav>
+        </div>
+     </header>
+ 
+     <main>
+        <div class="serie-principal">
+            <div class="contenedor">
+                <h3 class="titulo">Merlina</h3>
+                <p class="descripcion">
+                    Inteligente, sarcástica y un poco muerta por dentro, Merlina Addams 
+                    investiga una ola de asesinatos mientras hace nuevos amigos (y enemigos)
+                    en la Academia Nunca Más.
+                    Protagonistas:Jenna Ortega,Gwendoline Christie,Riki Lindhome
+                    Creado por:Alfred Gough,Miles Millar
+                </p>
+                <button role="button" class="boton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                    <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                  </svg>Reproducir</button>
+                <button role="button" class="boton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg>Más información</button>
+            </div>
+        </div>
+     </main>
+
+   
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+------------------------------------------------------ CSS -------------------------------------------------------------------------
+
+:root{
+    --rojo: #e50914;
+    --fondo: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+    
+}
+
+header nav a{
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo{
+    color: #fff;
+}
+
+
+
+
+.serie-principal{
+    display: flex;
+    align-items: end;
+    font-size: 16px;
+    min-height: 40.62rem;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(./img/Merlina_Serie_de_TV-938002261-large.jpg);
+    background-position: center center;
+    margin-bottom: 3.12em;
+}
+
+.serie-principal .contenedor{
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.serie-principal .titulo{
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.serie-principal .descripcion{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.serie-principal .boton{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.25;
+}
+
+.serie-principal .boton:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+
+@media screen and (max-width:800px) {
+    header .logotipo{
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor´{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .serie-principal{
+        font-size: 14px;
+    }
+
+    .serie-principal .descripcion{
+        max-width: 100px;
+    }
+}   
+----------------------------------CARPETA img contiene esta foto Merlina_Serie_de_TV-938002261-large.jpg....................................
+
+ url(./img/Merlina_Serie_de_TV-938002261-large.jpg);
